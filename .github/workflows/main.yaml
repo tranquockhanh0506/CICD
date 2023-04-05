@@ -13,17 +13,17 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           - java-version: '12.x'
-      - user: subosito/flutter-action@v1
-        with:
-          - flutter-version: '3.7.7'
-      - run: flutter pub get
-      - run: flutter build apk --release
-      - name: Push to Release
-        uses: ncipollo/release-action@v1
-        with:
-          artifacts: "build/app/outputs/apk/debug/*"
-          tag: v1.0${{ github.run_number }}
-          token: $X{{ secrets.TOKEN }}
+#      - user: subosito/flutter-action@v1
+#        with:
+#          - flutter-version: '3.7.7'
+#      - run: flutter pub get
+#      - run: flutter build apk --release
+#      - name: Push to Release
+#        uses: ncipollo/release-action@v1
+#        with:
+#          artifacts: "build/app/outputs/apk/debug/*"
+#          tag: v1.0${{ github.run_number }}
+#          token: $X{{ secrets.TOKEN }}
 #jobs:
 #  build:
 #    name: Build & Release
