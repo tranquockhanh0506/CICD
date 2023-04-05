@@ -10,14 +10,14 @@ jobs:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v1
-#      - uses: actions/setup-java@v1
-#        with:
-#          - java-version: '12.x'
-#      - user: subosito/flutter-action@v1
-#        with:
-#          - flutter-version: '3.7.7'
-#      - run: flutter pub get
-#      - run: flutter build apk --release
+      - uses: actions/setup-java@v1
+        with:
+          - java-version: '12.x'
+      - user: subosito/flutter-action@v1
+        with:
+          - flutter-version: '3.7.7'
+      - run: flutter pub get
+      - run: flutter build apk --release
 #      - name: Push to Release
 #        uses: ncipollo/release-action@v1
 #        with:
