@@ -6,7 +6,7 @@ on:
       - CICD
 jobs:
   build:
-    name: build-aab
+    name: Build & Release
     runs-on: self-hosted
 
     steps:
