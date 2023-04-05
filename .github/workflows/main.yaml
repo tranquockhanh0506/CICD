@@ -20,6 +20,7 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           channel: 'stable'
+
       - id: read-version
         uses: NiklasLehnfeld/flutter-version-number-action@main
         with:
