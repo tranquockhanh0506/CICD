@@ -1,13 +1,13 @@
-name: build-aab
+name: CICD
 
 on:
   push:
     branches:
-      - build-aab
+      - CICD
 
 jobs:
   build:
-    name: build-aab
+    name: CICD
     runs-on: self-hosted
 
     steps:
