@@ -30,14 +30,13 @@ jobs:
 
       - run: flutter clean
       - run: flutter pub get
-#      - run: flutter pub get
-#      - run: flutter build apk --release
-#      - name: Push to Release
-#        uses: ncipollo/release-action@v1
-#        with:
-#          artifacts: "build/app/outputs/apk/debug/*"
-#          tag: v1.0${{ github.run_number }}
-#          token: $X{{ secrets.TOKEN }}
+      - run: flutter build apk --release
+      - name: Push to Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "build/app/outputs/apk/debug/*"
+          tag: v1.0${{ github.run_number }}
+          token: $X{{ secrets.TOKEN }}
 #jobs:
 #  build:
 #    name: Build & Release
