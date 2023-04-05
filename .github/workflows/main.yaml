@@ -16,8 +16,16 @@ jobs:
       - user: subosito/flutter-action@v1
         with:
           channel: 'stable'
+      - id: read-version
+        uses: NiklasLehnfeld/flutter-version-number-action@main
+        with:
+          file-path: pubspec.yaml
+      - run: echo "version ${{ steps.read-version.outputs.version-number }}"
+
+      - run: flutter clean
       - run: flutter pub get
-      - run: flutter build apk --release
+#      - run: flutter pub get
+#      - run: flutter build apk --release
 #      - name: Push to Release
 #        uses: ncipollo/release-action@v1
 #        with:
